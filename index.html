@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="crazy-fireworks.css" />
+  <title>Happy Birthday, My Brother</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans:wght@400;600&display=swap');
+
+    body {
+      background-color: #000;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: 'Open Sans', sans-serif;
+      color: #fff;
+    }
+
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 100;
+      padding: 20px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: #ffffff;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #ffcc00;
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+
+    #reveal-button {
+      background: none;
+      border: 2px solid #ffcc00;
+      padding: 14px 36px;
+      font-size: 1.2rem;
+      color: #ffcc00;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    #reveal-button:hover {
+      background-color: #ffcc00;
+      color: #000;
+    }
+
+    #surprise-message {
+      display: none;
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid #ffcc00;
+      border-radius: 10px;
+      padding: 30px;
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      box-shadow: 0 0 20px #ffcc00;
+      color: #ffffff;
+    }
+
+    #signature {
+      margin-top: 40px;
+      text-align: right;
+      font-style: italic;
+      font-weight: 600;
+      color: #ffcc00;
+    }
+
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="centered" id="intro">
+    <h1>Happy Birthday, My Brother!</h1><br />
+    <button id="reveal-button">Open for Surprise</button>
+  </div>
+
+  <div id="surprise-message" class="centered">
+    <p>Today is your day, and I wish you nothing but joy, strength, and continued growth on the path you're walking. I know deep in your heart you're striving toward something truly meaningful. Just remember—always choose discernment over desire.</p>
+    <p>We may not be brothers by blood, but I am your brother by heart. I’ll always wish you good health, wisdom, and the courage to keep putting God first in everything you do.</p>
+    <p>And remember this—once you choose to gain faith and bring yourself back to the right path, there’s no turning back. That road might not always be easy, but it leads to real peace, real purpose, and a life worth living.</p>
+    <p><strong>Keep going—you’re not alone. Enjoy your day, king. You deserve every blessing coming your way.</strong></p>
+    <div id="signature">From: Ken</div>
+  </div>
+
+  <script src="crazy-fireworks.js"></script>
+  <script>
+    document.getElementById('reveal-button').addEventListener('click', function () {
+      this.style.display = 'none';
+      document.getElementById('intro').style.display = 'none';
+      document.getElementById('surprise-message').style.display = 'block';
+      startFireworks();
+    });
+  </script>
+
+</body>
+</html>
